@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>layout1</title>
+        <meta charset="utf-8" name="author" content="최아름" />
+        <style>
+            header,div,nav,footer,ul,li,h1,h2,h3 {
+                /* border: solid 1px black; */ /* 경계선 긋기 */
+                /* margin: 10px; */ /* 서로 간의 여유 공간 만들기 */
+            }
+            header>ul>li {
+                float:left; /* 둥둥 떠다니게 : 왼쪽 기준 */
+                list-style: none; /* 목록-모습 (동그라미)가 없다 */
+                padding-left: 20px; /* 내부 여백 왼쪽 : 10px, margin: 바깥여백 */ 
+                padding-right: 20px; /* 내부 여백 오른쪽 : 10px */
+                border-right: solid 1px gray /* 경계선-right: 실선 1px 두께 회색 */
+            } 
+            header>ul>li:nth-child(5) {
+                border: none /* 경계선 없음 */
+            }
+            header>h1 {
+                margin: 0px; 
+            }
+            header>ul {
+                margin-left: 100px;
+                margin-top: 50px;
+            }
+            #zoom {
+                margin-left: 100px;
+                margin-top: 50px;
+            }
+            .clear {
+                clear: both; /* 지우다: 양쪽 */
+                height: 0px; /* 높이는 0 */
+                overflow: hidden; /* 넘쳤을 때: 숨김 */
+            }
+            /* float left 사용한 ul 에만 적용, 마구잡이로 사용하면 안됨 */
+
+            .float_left { float: left; }
+            .float_right { float: right; }
+
+            nav>ul>li /* nav li 로 부르는 것도 가능함 */ {
+                float: left;
+                list-style: none;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            nav>h2 {
+                margin: 8px;
+            }
+            nav{
+                background-color: #ddd;
+            }
+            #content>div:nth-child(1) {
+                background-color: #5d9;
+            }
+            #content>div:nth-child(2) {
+                background-color: #98f;
+            }
+            #content>div:nth-child(3) {
+                background-color: #f79;
+            }
+            #content>div:nth-child(4) {
+                background-color: #ec5;
+            }
+            .content_part {
+                float: left;
+                width: 600px;
+            }
+            #content h3{
+                color: white;
+            }
+            #content dt{
+                font-weight: bold; /* 글씨-두께: 두껍게 */
+            }
+            #content dd{
+                
+            }
+            .content_part dd{
+                margin : 0px;
+            }
+            .content_part {
+                margin : 30px;
+            }
+            #content section{
+                width: 1340px;
+                margin-left: 100px; /* 고정 값 */
+                margin-left: auto; /* 가변 값 */
+                margin-right: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <header>
+                <h1 class="float_left"> 
+                    <img src="layout1/logo.jpg"/>
+                </h1>
+                <ul class="float_left">
+                    <li>about</li>
+                    <li>project</li>
+                    <li>works</li>
+                    <li>news</li>
+                    <li>contect</li>
+                    <div class="clear"></div> <!-- float left 해제 -->
+                </ul>
+                <div id="zoom" class="float_right">
+                    <img src="layout1/layout1_head_zoom.jpg"/>
+                </div>
+                <div class="clear"></div> <!-- float left 해제 -->
+            </header>
+
+            <nav>
+                <h2 class="float_left">see our works</h2>
+                <ul class="float_right">
+                    <li>album art</li>
+                    <li>design</li>
+                    <li>Illustration</li>
+                    <li>video</li>
+                    <div class="clear"></div> <!-- float left 해제 -->
+                </ul>
+                <div class="clear"></div> <!-- float left 해제 -->
+            </nav>
+
+            <div id="content">
+                <div>
+                    <section> <!-- 가운데 정렬할 때 사용해야하기 때문에 div에 적용하는 것이 맞음. -->
+                        <!-- blue box section -->
+                        <h3>First, </h3>
+                        <div class="content_part">
+                            <!-- left side -->
+                            <img src="layout1/01.jpg"/>
+                            <dl>
+                                <dt> day break, in sun rise </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula,
+                                    non laoreet ligula. Maecenas
+                                    at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <!-- right side -->
+                            <img src="layout1/01_g.jpg"/>
+                            <dl>
+                                <dt> your earth? </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula
+                                    non laoreet ligula. Maecenas
+                                    at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div >
+                        <div class="clear"></div> <!-- float left 해제 -->
+                    </section>
+                </div>
+                
+                <div>
+                    <section>
+                        <!-- mint box section -->
+                        <h3>Second, </h3>
+                        <div class="content_part">
+                            <!-- left side -->
+                            <img src="layout1/02.jpg"/>
+                            <dl>
+                                <dt> day break, in sun rise </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula,
+                                    non laoreet ligula. Maecenas
+                                    at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <!-- right side -->
+                            <img src="layout1/02_g.jpg"/>
+                            <dl>
+                                <dt> your earth? </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula
+                                    non laoreet ligula. Maecenas
+                                    at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div> <!-- float left 해제 -->
+                    </section>
+                </div>
+
+                <div>
+                    <section>
+                        <!-- yellow box section -->
+                        <h3>Third, </h3>
+                        <div class="content_part">
+                            <!-- left side -->
+                            <img src="layout1/03.jpg"/>
+                            <dl>
+                                <dt> day break, in sun rise </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula,
+                                    non laoreet ligula. Maecenas
+                                    at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <!-- right side -->
+                            <img src="layout1/03_g.jpg"/>
+                            <dl>
+                                <dt> your earth? </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula
+                                    non laoreet ligula. Maecenas
+                                    at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div> <!-- float left 해제 -->
+                    </section>
+                </div>
+
+                <div>
+                    <section>
+                        <!-- pink box section -->
+                        <h3>Goods, </h3>
+                        <div class="content_part">
+                            <!-- left side -->
+                            <img src="layout1/01_.jpg"/>
+                            <dl>
+                                <dt> day break, in sun rise </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula,
+                                    non laoreet ligula. Maecenas
+                                    at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <!-- right side -->
+                            <img src="layout1/02_.jpg"/>
+                            <dl>
+                                <dt> your earth? </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula
+                                    non laoreet ligula. Maecenas
+                                    at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div> <!-- float left 해제 -->
+                    </section>
+                </div>
+            </div>
+
+            <footer>footer</footer>
+        </div>
+    </body>
+
+</html>
