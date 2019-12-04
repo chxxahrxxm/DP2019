@@ -7,164 +7,118 @@
         <meta name="author" content="CHOI AH REUM" />
         <meta name="keywords" content="internet shopping mall::home" />
     </head>
+        <style>
+            .imgchange img:last-child{display:none}
+            .imgchange:hover img:first-child{display:none}
+            .imgchange:hover img:last-child{display:inline-block}
 
-                <style>
-                        .jb-xx-small { font-size: xx-small; }
-                        .jb-x-small { font-size: x-small; }
-                        .jb-small { font-size: small; }
-                        .jb-medium { font-size: medium; }
-                        .jb-large { font-size: large; }
-                        .jb-x-large { font-size: x-large; }
-                        .jb-xx-large { font-size: xx-large; }
-                    </style>
+            #text_target
+                { vertical-align: top; }
 
-                    <style>
-                            .imgchange img:last-child{display:none}
-                            .imgchange:hover img:first-child{display:none}
-                            .imgchange:hover img:last-child{display:inline-block}
-                    </style>
-                        
-                        <style> 
-                            #text_target
-                                { vertical-align: top; }
-                        </style>
+            table, th, td {
+            border: 1px solid #ffffff;
+            }
+            table {
+            width: 800px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            }
 
-                        <style>
-                                table, th, td {
-                                border: 1px solid #ffffff;
-                                }
-                                table {
-                                width: 800px;
-                                height: 100px;
-                                margin-left: auto;
-                                margin-right: auto;
-                                }
-                                th {
-                                text-align: center;
-                                }
-                                td {
-                                text-align: center;
-                                }
-                            
-                            a:link{ color: black; text-decoration: none; } 
-                            a:hover{ color: lightgray; }
-                            a:active{ color: black;}
-                            a:visited{color: black; text-decoration: none; }
-                           
-                        </style>
+            th { text-align: center; }
+            td { text-align: center; }
+                
+            a:link{ color: black; text-decoration: none; } 
+            a:hover{ color: lightgray; }
+            a:active{ color: black;}
+            a:visited{color: black; text-decoration: none; }
 
-                        <div style="text-align : center;"></div>
+            #logo_img{
+                margin-left:100px;
+                display:inline-block;
+            }
+            #login{
+                float: right;
+                display:inline-block;
+            }
+            .gnb{
+                position: relative;      
+                position: fixed;
+                width: 100%;
+                height: 240px;
+                background-color: white;
+                z-index: 500;
+                margin: 0px;
+                margin-top: -8px;
+            }
 
-                            <style>
-                                #logo_img{
-                                    margin-left:100px;
-                                    display:inline-block;
-                                }
-                                    #login{
-                                    float: right;
-                                    display:inline-block;
-                                }
-                            </style>
+            nav{
+                width: 800px;
+                height: 130px;
+                
+                margin: 0 auto;
+            }
+            ul{
+                position: relative;
+                list-style: none;
+                font-size: 24px;
+            }
+            ul li{
+                float: left;
+                width: 190px;
+                height: 130px;
+                margin-top:40px;
+                font-size:30px;
+                color: lightgray;
+            }
+        </style>
+        <div style="text-align : center;"></div>
+    <div> 
 
-                            <style>
-                                .gnb
-                        {
-                          position: relative;      
-                          position: fixed;
-                                width: 100%;
-                                height: 240px;
-                                background-color: white;
-                                z-index: 500;
-                                margin: 0px;
-                                margin-top: -8px;
-                        }
+        <div class="gnb">
+            <section id="logo_img">
+                <a href="home.html"><img src="./ODD_PALLET/logo.jpg" width="300px" /></a>
+            </section>
+        </div>
+        <div style="text-align : right;" id="login">
 
-                              nav
-                              {
-                                width: 800px;
-                                height: 130px;
-                              
-                                margin: 0 auto;
-                              }
+            <a href="login.html" id="font" target="_blank" p class="jb-small" > LOG IN </a> /
+            <a href="form.html" id="font" target="_blank" p class="jb-small" > JOIN US</a>
+        </div>
+            <nav>
+                <ul>
+                    <li> <a href="about.html" id="banner" target="_blank" p class="jb-small"> ABOUT </a> </li>
+                    <li> <a href="work.html" id="banner" target="_blank" p class="jb-small"> WORK </a> </li>
+                    <li> <a href="shop.html" id="banner" target="_blank" p class="jb-small"> SHOP </a> </li>
+                    <li> <a href="contect.html" id="banner" target="_blank" p class="jb-small"> CONTECT </a> </li>
+                </ul>
+            </nav>
+        </div>
 
-                              ul
-                              {
-                                position: relative;
-                                list-style: none;
-                                
-                                font-size: 24px;
-                                
-                              }
-
-                              ul li
-                              {
-                                float: left;
-                                width: 190px;
-                                height: 130px;
-                                margin-top:40px;
-                                font-size:30px;
-                                color: lightgray;
-                              }
-                            </style>
-                <div> 
-        
-                    <div class="gnb">
-                        <section id="logo_img">
-                            <a href="home.html"><img src="./ODD_PALLET/logo.jpg" width="300px" /></a>
-                        </section>
-                    </div>
-                    <div style="text-align : right;" id="login">
-
-                        <a href="login.html" id="font" target="_blank" p class="jb-small" > LOG IN </a> /
-                        <a href="form.html" id="font" target="_blank" p class="jb-small" > JOIN US</a>
-                    </div>
-
-                        <nav>
-                            <ul>
-                                        <li> <a href="about.html" id="banner" target="_blank" p class="jb-small"> ABOUT </a> </li>
-                                        <li> <a href="work.html" id="banner" target="_blank" p class="jb-small"> WORK </a> </li>
-                                        <li> <a href="shop.html" id="banner" target="_blank" p class="jb-small"> SHOP </a> </li>
-                                        <li> <a href="contect.html" id="banner" target="_blank" p class="jb-small"> CONTECT </a> </li>
-                            </ul>
-                        </nav>
-                </div>
-
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+    <br/>
 <body>
-                <table>
-                        <tbody>
-                         <tr>
-                                <td class="imgchange"><img src="./ODD_PALLET/Logo_T-Shirt_White.jpg" width="625px" />
-                                                              <img src="./ODD_PALLET/Logo_T-Shirt_White___.jpg" width="625px" /> </td>
-                                <td class="imgchange"><img src="./ODD_PALLET/Logo_T-Shirt_White.jpg" width="625px" />
-                                                              <img src="./ODD_PALLET/Logo_T-Shirt_White__.jpg" width="625px" /> </td>
-                                <td class="imgchange"><img src="./ODD_PALLET/Logo_T-Shirt_White.jpg" width="625px" />
-                                                              <img src="./ODD_PALLET/Logo_T-Shirt_White_.jpg" width="625px" /> </td>
-                         </tr>
-                          <tr>
-                                <td class="imgchange"><img src="./ODD_PALLET/01_.jpg" width="600px" />
-                                                      <img src="./ODD_PALLET/01_gg.jpg" width="600px" /> </td>
-                                <td class="imgchange"><img src="./ODD_PALLET/02_.jpg" width="600px" />
-                                                      <img src="./ODD_PALLET/02_gg.jpg" width="600px" /> </td>
-                                <td class="imgchange"><img src="./ODD_PALLET/03_.jpg" width="600px" />
-                                                      <img src="./ODD_PALLET/03_gg.jpg" width="600px" /> </td>
-                          </tr>
-                        </tbody>
-                </table>
+    <table>
+        <tbody>
+            <tr>
+                <td class="imgchange"><img src="./ODD_PALLET/Logo_T-Shirt_White.jpg" width="625px" />
+                                            <img src="./ODD_PALLET/Logo_T-Shirt_White___.jpg" width="625px" /> </td>
+                <td class="imgchange"><img src="./ODD_PALLET/Logo_T-Shirt_White.jpg" width="625px" />
+                                            <img src="./ODD_PALLET/Logo_T-Shirt_White__.jpg" width="625px" /> </td>
+                <td class="imgchange"><img src="./ODD_PALLET/Logo_T-Shirt_White.jpg" width="625px" />
+                                            <img src="./ODD_PALLET/Logo_T-Shirt_White_.jpg" width="625px" /> </td>
+            </tr>
+            <tr>
+                <td class="imgchange"><img src="./ODD_PALLET/01_.jpg" width="600px" />
+                                        <img src="./ODD_PALLET/01_gg.jpg" width="600px" /> </td>
+                <td class="imgchange"><img src="./ODD_PALLET/02_.jpg" width="600px" />
+                                        <img src="./ODD_PALLET/02_gg.jpg" width="600px" /> </td>
+                <td class="imgchange"><img src="./ODD_PALLET/03_.jpg" width="600px" />
+                                        <img src="./ODD_PALLET/03_gg.jpg" width="600px" /> </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
-
         <footer>
-        <br/>
-        <br/>
         <br/>
     <hr/>
             <h6>회사명 : ODD PALLET (오드팔레트) l 대표 : 최아름 l 대표 전화 : 010-7507-9017 l 이메일 : oddpallet@gmail.com

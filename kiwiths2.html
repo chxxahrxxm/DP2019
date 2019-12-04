@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>kiwiths</title>
+        <meta charset="utf-8" name="author" content="Kiwiths_renewal" />
+        <style type="text/css">
+            .space{
+             height:200px;
+            }
+            .imgchange img:last-child{display:none}
+            .imgchange:hover img:first-child{display:none}
+            .imgchange:hover img:last-child{display:inline-block}
+            
+            .clear {
+                clear: both;
+                height: 0px;
+                overflow: hidden;
+            }
+            .float_left { float: left; }
+            .float_right { float: right; }
+
+            header h1 {
+                padding: 0px;
+                padding-top: 40px;
+                margin: 0px;
+                z-index: 2;
+            }
+            .gnb {
+                position: fixed;
+                z-index:1;
+                top:0;
+                width: 100%;
+                height: 120px;
+                background-color: white;
+            }
+            .nav1{
+                float: left;
+                list-style: none;
+                color: rgb(0, 0, 0);
+                padding: 0px;
+                margin: 0px;
+            }
+            .nav1 li{
+                margin: 0px;
+                padding: 0px 20px;
+                font-size: small;
+            }
+            nav{
+                z-index: 1;
+                background-color: white;
+            }
+            nav li {
+                float: left;
+                list-style: none;
+                margin:0px;
+                padding-top: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .nav1>ul>li:nth-child(1) {
+                padding: 0px 20px 0px 5px;
+            }
+            nav>ul:nth-child(1) {
+                padding: 0px; 
+                margin-right: 200px;
+                font-size: medium;
+                text-decoration: none;
+            }
+            /* nav>ul:nth-child(2) {
+                padding: 0px; 
+                margin: 10px 0px;
+                font-size: medium; 
+            } */
+            body {
+                margin: 0px;
+                padding-top: 120px;
+            }
+            .slide{
+                width: calc(1700px * 3);
+                position: relative;
+                padding: 0px;
+                margin: 0px;
+            }
+            .slide>li{
+                width: 1700px;
+                /* float: left; */
+                display: inline-block;
+                height: 830px;
+            }
+            .slide>li>img {
+                width: 100%;
+                height: 100%;
+            }
+            section{
+                text-align: center;
+            }
+            section h3{
+                color: #6ed32af3;
+                font-size: 25px;
+                font-weight: bold;
+                margin: 50px 0px;
+            }
+            section dt{
+                font-size: medium;
+                font-weight: bold;
+            }
+            section dd{
+                font-size: small;
+                font-weight: normal;
+            }
+            section p{
+                margin: 50px 100px;
+            }
+            section>#about_list>li{
+                float: left;
+                width: 200px;
+                width: calc(25% - (1px / 4 * 3) - 30px - 30px);
+
+                list-style: none;
+                border-right: solid 1px lightgray;
+                padding: 30px;
+            }
+            section>#about_list>li:nth-child(4){
+                border: none;
+            }
+            section #about_list{
+                padding: 0px;
+                margin: 0px 50px;
+            }
+            .guide_text {
+                /* color: white; */
+                font-weight: bold;
+            }
+            a:link{ color: black; text-decoration: none; } 
+            a:hover{ color: lightgray; }
+            a:active{ color: black; }
+            a:visited{color: black; text-decoration: none; }
+
+            a{
+                text-decoration: none;
+                color: rgb(211, 182, 228);
+                padding: 0px 10px;
+                font-size: 13px;
+            }
+            #wrap{
+                min-width: 1280px;
+                max-width: 1700px;
+                margin-left: auto;
+                margin-right: auto;
+                
+                width: 1700px;
+                margin: 70px auto;
+                position: relative;
+                overflow: hidden;
+            }
+            #wrap>p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 15px;
+                background: rgba(125, 189, 42, 0.938);
+                padding: 10px 20px;
+                font-size: 24px;
+            }
+            footer{
+                background-color: rgba(125, 189, 42, 0.938);
+                color: white;
+                padding: 10px 50px;
+            }
+            footer>div>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우 */
+                border-right: solid 1px white;
+            }
+            footer>div>ul>li:nth-child(4){
+                border: none;
+            }
+            footer>div>ul{
+                padding: 0px;
+                font-size: 12px;
+            }
+            footer>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            #footer_left{
+                float: left;
+                font-size: 14px;
+            }
+            #footer_right{
+                float: right;
+            }
+        </style>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <header class="gnb">
+                <nav class="nav1">
+                    <ul class="float_left">
+                        <li><a href="index.html">INDEX</a></li>
+                        <li><a href="layout1.html">LAY-OUT 1</a></li>
+                        <li><a href="layout2.html">LAY-OUT 2</a></li>
+                        <li><a href="layout3.html">LAY-OUT 3</a></li>
+                        <li><a href="kiwiths2.html">FINAL</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                    <div class="clear"></div>
+                <h1 class="float_left">
+                    <img src="Kiwiths/kiwiths_3.png"/>
+                </h1>
+                <nav>
+                    <ul class="float_right">
+                        <li><a href="kiwiths2.html">HOME</a></li>
+                        <li><a href="#targrt1">ABOUT</a></li>
+                        <li><a href="#target2">BRAND</a></li>
+                        <li><a href="#target3">GUIDE</a></li>
+                        <li><a href="shop.html">STORE</a></li>
+                        <li><a href="contect.html">CONTECT</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+        </header>
+
+        <script>
+            function slide(){
+                $('.slide').animate({ left:-1700}, function(){
+                    $('.slide li:first').appendTo('.slide');
+                    $('.slide').css({ left: 0});
+                })
+            }
+            setInterval (slide, 3000)
+            </script>
+
+            <div id="wrap">
+                <div id="frame" style="width:1700px; height:830px; overflow: hidden;">
+                    <ul class="slide">
+                        <li><img src="Kiwiths/banner_001_.jpg" alt="slide image"></li>
+                        <li><img src="Kiwiths/banner_002.jpg" alt="slide image"></li>
+                        <li><img src="Kiwiths/banner_003.jpg" alt="slide image"></li>
+                    </ul>
+                </div>                
+            </div>
+
+        <section>
+            <div class="space"></div>
+            <h3 id="targrt1">ABOUT KIWITHS COMPANY</h3>
+                <img class="icon" src="Kiwiths/green.jpg" />
+                <p> Kiwiths는 뉴질랜드 사람들을 의미하는 단어인 KIWI와 건강인 Healths를 결합한 비즈니스 이름으로, <br/>
+                    오늘 날과 같이 변화하는 사회의 맞춘 현대식 건강 솔루션을 제의하는 글로벌 쇼핑몰입니다. <br/>
+                    저렴한 가격과 서비스로 미국, 유럽, 호주, 한국, 중국 등 유럽뿐만 아닌 아시아까지 전 세계에 서비스를 제공합니다.
+                </p>
+            <br/>
+            <ul id="about_list">
+                <li>
+                    <img class="icon" src="Kiwiths/promise.png" />
+                    <dl>
+                        <dt>TRUST</dt>
+                        <br/>
+                        <dd>
+                            Kiwiths는 전 세계적으로 건강 식품을 제조 수입 및 유통 판매를 하는 전문 기업입니다.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img class="icon" src="Kiwiths/new-zealand.png" />
+                    <dl>
+                        <dt>MADE IN New Zealand</dt>
+                        <br/>
+                        <dd>
+                            Kiwiths의 전 제품은 뉴질랜드에서 직접 제조한 후, 국내에 배송되는 100% 정품입니다.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img class="icon" src="Kiwiths/leaf.png" />
+                    <dl>
+                        <dt>NATURAL</dt>
+                        <br/>
+                        <dd>
+                            Kiwiths는 청정 자연의 땅인 뉴질랜드의 자연 원료로 제조된 건강하고 믿을 수 있는 제품만 엄선하여 판매합니다.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img class="icon" src="Kiwiths/earth.png" />
+                    <dl>
+                        <dt>GROBAL HEALTHY BRAND</dt>
+                        <br/>
+                        <dd>
+                            Kiwiths는 전 세계 유수의 마켓에서 판매되고 있는 글로벌 브랜드만을 엄선하여 판매합니다.
+                        </dd>
+                    </dl>
+                </li>
+                <div class="clear"></div>
+            </ul>
+        </section>
+
+        <section>
+            <div class="space"></div>
+            <h3 id="target2"> BRAND </h3>
+                <img src="Kiwiths/brand.jpg"/>
+            </div>
+            <div class="clear"></div>
+        </section>
+        <br/>
+        <div>
+            <section>
+                <div class="space"></div>
+                <h3 id="target3"> GUIDE </h3>
+                <div class="guide">
+                    <img src="Kiwiths/chapter1.png"/>
+                    <dl>
+                        <dt> Chapter. 1</dt>
+                        <dd>
+                            "장바구니에 추가"를 클릭하여 구매할 품목 선택
+                        </dd>
+                    </dl>
+                    <br/>
+                    <img src="Kiwiths/chapter2.png"/>
+                    <dl>
+                        <dt> Chapter. 2</dt>
+                        <dd>
+                            주문 세부 정보가 올바른 지 확인한 후 "다음"을 클릭
+                        </dd>
+                    </dl>
+                    <br/>
+                    <img src="Kiwiths/chapter3.png"/>
+                    <dl>
+                        <dt> Chapter. 3</dt>
+                        <dd>
+                            연락처 및 배송 세부 정보 확인
+                        </dd>
+                    </dl>
+                    <br/>
+                    <img src="Kiwiths/chapter4.png"/>
+                    <dl>
+                        <dt> Chapter. 4</dt>
+                        <dd>
+                            배송 방법을 선택한 후, "Paypal로 결제"를 클릭
+                        </dd>
+                    </dl>
+                    <br/>
+                    <img src="Kiwiths/chapter5.png"/>
+                    <dl>
+                        <dt> Chapter. 5</dt>
+                        <dd>
+                            Paypal 로그인 후, 신용 카드 정보와 개인 정보를 입력
+                        </dd>
+                    </dl>
+                    <br/>
+                    <img src="Kiwiths/chapter6.png"/>
+                    <dl>
+                        <dt> Chapter. 6</dt>
+                        <dd>
+                            총 금액을 확인한 후 “확인 및 지불”을 클릭
+                        </dd>
+                    </dl>
+                    <br/>
+                </div >
+                <div class="clear"></div>
+            </section>
+        </div>
+
+        <footer id="footer">
+                <!-- 왼쪽 상자 -->
+            <div id="footer_left">
+                <div>kiwiths.com ｜ Auckland, New Zealand ｜ Tel: +64 (0)27.255.6526 ｜ Email: kiwithsnz@gmail.com </div>
+                </br/>
+                <div> Web deisgn  ⓒ 2019 Choi Ah Reum right reserved. </div>
+                <div> All Photo and information  ⓒ 2019 Kiwiths right reserved. </div>
+            </div>
+                <!-- 오른쪽 상자 -->
+                <ul class="float_left" id="footer_right">
+                    <li><img src="layout1/f_book.png"></li>
+                    <li><img src="layout1/twitter.png"></li>
+                    <li><img src="layout1/pinterest.png"></li>
+                    <li><img src="layout1/instagram.png"></li>
+                    <div class="clear"></div>
+                </ul>
+            <div class="clear"></div>
+        </footer>
+        </div>
+    </body>
+</html>

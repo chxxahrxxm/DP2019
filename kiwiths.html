@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>kiwiths</title>
+        <meta charset="utf-8" name="author" content="Kiwiths_renewal" />
+        <style>
+            header h1 {
+                position:relative;
+                width:227px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #zoom {
+                position: absolute;
+                bottom:7px;
+                left: 800px;
+            }
+            .clear {
+                clear: both; /* 지우다: 양쪽 */
+                height: 0px; /* 높이는 0 */
+                overflow: hidden; /* 넘쳤을 때: 숨김 */
+            }
+            .category{
+                position:fixed;
+                z-index:1;
+                top:0px;
+                height:300px;
+            }
+
+            .float_left { float: left; }
+            .float_right { float: right; }
+
+            nav li{
+                float: left;
+                list-style: none;
+                padding-left: 20px;
+                padding-right: 20px;
+
+                color: white;
+                border-right: solid 1px white;
+                padding: 20px;
+            }
+            nav{
+                background-color: rgba(125, 189, 42, 0.938);
+                /* padding: 10px 50px; */
+            }
+            footer{
+                background-color: rgba(125, 189, 42, 0.938);
+                color: white;
+                padding: 100px 100px;
+            }
+            footer>div>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우 */
+                border-right: solid 1px white;
+            }
+            footer>div>ul>li:nth-child(4){
+                border: none;
+            }
+            footer>div>ul{
+                padding: 0px;
+                font-size: 12px;
+            }
+            footer>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            #footer_left{
+                float: left;
+                font-size: 14px;
+            }
+            #footer_right{
+                float: right;
+            }
+            #wrap{
+                /* width: 1340px; 고정 값 */
+                min-width: 1080px;
+                max-width: 1920px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            body{
+                margin: 0px 100px;
+            }                     
+            a:link{ color: black; text-decoration: none; } 
+            a:hover{ color: lightgray; }
+            a:active{ color: black; }
+            a:visited{color: black; text-decoration: none; }
+
+            .float_left li{
+                float: left;
+                font-size: 13px;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            .float_right li{
+                float: left;
+                font-size: 13px;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            section{
+                text-align: center;
+            }
+            section h3{
+                color: rgba(125, 189, 42, 0.938);
+                font-size: 20px;
+                font-weight: normal;
+                margin: 50px 0px;
+            }
+            section p{
+                margin: 50px 100px; /* 상하 좌우 */
+            }
+            section dd{
+                margin: 0px;
+            }
+            #best_item li{
+                float: left;
+                list-style: none;
+                width: 25%
+            }
+            #best_item img{
+                width: 100%;
+                display: inline; /* 원래 이미지의 출력 방식 */
+                display: block; /* 블록형으로 번경 - 이미지 하단 여백 공간 삭제*/
+            }
+            #best_item{
+                padding: 0px;
+                margin: 0px;
+            }
+            li {
+                list-style: none;
+            }
+            .slide{
+                width: calc(1920px * 3);
+                position: relative;
+                padding: 0px;
+                margin: 0px;
+            }
+            .slide>li{
+                width: 1920px;
+                /* float: left; */
+                display: inline-block;
+                height: 1080px;
+            }
+            .slide>li>img {
+                width: 100%;
+                height: 100%;
+            }
+            #wrap{
+                min-width: 1000px; /* 최소 사이즈 - 최소 사이즈보다 작을 경우 하단에 스크롤이 생김 */
+                max-width: 1920px; /* 최대 사이즈 */
+                margin-left: auto;
+                margin-right: auto;
+                
+                width: 1920px;
+                margin: 20px auto;
+                position: relative;
+                overflow: hidden;
+            }
+            #wrap>p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 15px;
+                background: rgba(125, 189, 42, 0.938);
+                padding: 10px 20px;
+                font-size: 24px;
+            }
+        </style>
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    </head>
+
+    <body>
+        <ul class="float_left">
+            <li>회사 소개</li>
+            <li>공지 사항</li>
+            <li>FAQ</li>
+            <li>고객 센터</li>
+            <div class="clear"></div>
+        </ul>
+        <ul class="float_right">
+            <li>로그인</li>
+            <li>회원 가입</li>
+            <li>장바구니</li>
+            <li>마이페이지</li>
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+
+        <div id="wrap">
+            <header>
+                <h1>
+                    <img src="Kiwiths/kiwiths_2.png"/>
+                    <div id="zoom" class="float_right">
+                        <img src="Kiwiths/layout1_head_zoom.jpg"/>
+                    </div>
+                </h1>
+                
+                <div class="clear"></div>
+            </header>
+
+            <nav class="category">
+                <ul class="float_left" id="nav">
+                    <li>브랜드 별</li>
+                    <li>증상 별</li>
+                    <li>성분 별</li>
+                    <li>연령 별</li>
+                    <li>뷰티 케어</li>
+                    <li>스페셜</li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div> 
+            </nav>
+
+            
+
+            <div isd="wrap">
+                <div id="frame" style="width:1920px; height:1080px; overflow: hidden;">
+                    <ul class="slide">
+                        <li><img src="Kiwiths/banner_00.jpg" alt="slide image"></li>
+                        <li><img src="Kiwiths/banner_01.jpg" alt="slide image"></li>
+                        <li><img src="Kiwiths/banner_02.jpg" alt="slide image"></li>
+                    </ul>
+                </div>                
+            </div>
+
+            <section> 
+                <h3>HOT! 인기 상품</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="imgchange"><img src="Kiwiths/best_01.jpg" width="600px" />
+                                                    <img src="./ODD_PALLET/01_g.jpg" width="600px" /> </td>
+                            <td class="imgchange"><img src="Kiwiths/best_02.jpg" width="600px" />
+                                                    <img src="./ODD_PALLET/02_g.jpg" width="600px" /> </td>
+                            <td class="imgchange"><img src="Kiwiths/best_03.jpg" width="600px" />
+                                                    <img src="./ODD_PALLET/03_g.jpg" width="600px" /> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul id="best_item">
+                    <li><img src="Kiwiths/best_01.jpg" /></li>
+                    <li><img src="Kiwiths/best_02.jpg" /></li>
+                    <li><img src="Kiwiths/best_03.jpg" /></li>
+                    <li><img src="Kiwiths/best_04.jpg" /></li>
+                    <li><img src="Kiwiths/best_05.jpg" /></li>
+                    <li><img src="Kiwiths/best_06.jpg" /></li>
+                    <li><img src="Kiwiths/best_07.jpg" /></li>
+                    <li><img src="Kiwiths/best_08.jpg" /></li>
+                    <div class="clear"></div> <!-- float left 해제 -->
+                </ul>
+            </section>
+
+            <section> 
+                <h3>NEW! 신상품</h3>
+                <ul id="best_item">
+                    <li><img src="Kiwiths/new_01.jpg" /></li>
+                    <li><img src="Kiwiths/new_02.jpg" /></li>
+                    <li><img src="Kiwiths/new_03.jpg" /></li>
+                    <li><img src="Kiwiths/new_04.jpg" /></li>
+                    <li><img src="Kiwiths/new_05.jpg" /></li>
+                    <li><img src="Kiwiths/new_06.jpg" /></li>
+                    <li><img src="Kiwiths/new_07.jpg" /></li>
+                    <li><img src="Kiwiths/new_08.jpg" /></li>
+                    <div class="clear"></div> <!-- float left 해제 -->
+                </ul>
+            </section>
+
+            <section> 
+                <h3>맞춤 추천 상품</h3>
+                <ul id="best_item">
+                    <li><img src="Kiwiths/new_01.jpg" /></li>
+                    <li><img src="Kiwiths/new_02.jpg" /></li>
+                    <li><img src="Kiwiths/new_03.jpg" /></li>
+                    <li><img src="Kiwiths/new_04.jpg" /></li>
+                    <li><img src="Kiwiths/new_05.jpg" /></li>
+                    <li><img src="Kiwiths/new_06.jpg" /></li>
+                    <li><img src="Kiwiths/new_07.jpg" /></li>
+                    <li><img src="Kiwiths/new_08.jpg" /></li>
+                    <div class="clear"></div> <!-- float left 해제 -->
+                </ul>
+            </section>
+
+            <footer id="footer">
+                    <!-- 왼쪽 상자 -->
+                <div id="footer_left">
+                    <div>kiwiths.com ｜ Auckland, New Zealand ｜ Tel: +64 (0)27.255.6526 ｜ Email: kiwithsnz@gmail.com </div>
+                    </br/>
+                    <div> Web deisgn  ⓒ 2019 Choi Ah Reum right reserved. </div>
+                    <div> All Photo and information  ⓒ 2019 Kiwiths right reserved. </div>
+                </div>
+                    <!-- 오른쪽 상자 -->
+                    <ul class="float_left" id="footer_right">
+                        <li><img src="layout1/f_book.png"></li>
+                        <li><img src="layout1/twitter.png"></li>
+                        <li><img src="layout1/pinterest.png"></li>
+                        <li><img src="layout1/instagram.png"></li>
+                        <div class="clear"></div>
+                    </ul>
+                <div class="clear"></div>
+            </footer>
+    </body>
+</html>

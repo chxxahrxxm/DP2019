@@ -1,26 +1,183 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>콘텐츠 프로그래밍 사이트</title>
-        <meta charset="utf-8" />
-        <!-- utf-8, euc-kr -->
-        <meta name="author" content="최아름">
-        <meta name="keywords" content="계원, 콘텐츠 프로그래밍, 디지털미디어디자인" />
-    </head>
-    <body>
-            <h1>과제</h1>
+        <title>kiwiths</title>
+        <meta charset="utf-8" name="author" content="choiahreum" />
+        <style type="text/css">
+            .space{
+             height:100px;
+            }
+            .imgchange img:last-child{display:none}
+            .imgchange:hover img:first-child{display:none}
+            .imgchange:hover img:last-child{display:inline-block}
+            
+            .clear {
+                clear: both;
+                height: 0px;
+                overflow: hidden;
+            }
+            .float_left { float: left; }
+            .float_right { float: right; }
 
-            <br/> 
-            <h3>2주차</h3>
-        <a href="html_part1.html">DAY6</a>
-            <h3>5주차</h3>
-        <a href="html5.html">html5</a>
-           <h3>Form</h3>
-        <a href="form.html">html5</a>
-            <h3>css</h3>
-        <a href="css.html">html5</a>
-            <h3>중간 평가 [ODD PALLET] </h3>
-        <a href="home.html">html5</a>
+            header h1 {
+                padding: 0px;
+                padding-top: 40px;
+                margin: 0px;
+                z-index: 2;
+            }
+            .gnb {
+                position: fixed;
+                z-index:1;
+                top:0;
+                width: 100%;
+                height: 120px;
+                background-color: white;
+            }
+            .nav1{
+                float: left;
+                list-style: none;
+                color: rgb(0, 0, 0);
+                padding: 0px;
+                margin: 0px;
+            }
+            .nav1 li{
+                margin: 0px;
+                padding: 0px 20px;
+                font-size: small;
+            }
+            nav{
+                z-index: 1;
+                background-color: white;
+            }
+            nav li {
+                float: left;
+                list-style: none;
+                margin:0px;
+                padding-top: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .nav1>ul>li:nth-child(1) {
+                padding: 0px 20px 0px 5px;
+            }
+            nav>ul:nth-child(1) {
+                padding: 0px; 
+                margin-right: 200px;
+                font-size: medium;
+                text-decoration: none;
+            }
+            a{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                padding: 0px 10px;
+                font-size: 13px;
+            }
+            #wrap{
+                min-width: 1280px;
+                max-width: 1700px;
+                margin-left: auto;
+                margin-right: auto;
+                
+                width: 1700px;
+                margin: 70px auto;
+                position: relative;
+                overflow: hidden;
+            }
+            footer{
+                background-color: rgba(185, 185, 185, 0.938);
+                color: white;
+                padding: 10px 50px;
+            }
+            footer>div>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우 */
+                border-right: solid 1px white;
+            }
+            footer>div>ul>li:nth-child(4){
+                border: none;
+            }
+            footer>div>ul{
+                padding: 0px;
+                font-size: 12px;
+            }
+            footer>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            #footer_left{
+                float: left;
+                font-size: 14px;
+            }
+            #footer_right{
+                float: right;
+            }
+            #block{
+                position:fixed;
+                width:150%;
+                height:150px;
+                background-color:white;
+                top:0;
+                margin:0;
+                padding:0;
+            }
+        </style>
+
+    <body>
+        <div id="wrap">
+            <header class="gnb">
+                <nav class="nav1">
+                    <ul class="float_left">
+                        <li><a href="index.html">INDEX</a></li>
+                        <li><a href="layout1.html">LAY-OUT 1</a></li>
+                        <li><a href="layout2.html">LAY-OUT 2</a></li>
+                        <li><a href="layout3.html">LAY-OUT 3</a></li>
+                        <li><a href="kiwiths2.html">FINAL</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                    <div class="clear"></div>
+                <h1 class="float_left">
+                    <img src="Kiwiths/logo.png"/>
+                </h1>
+                <nav>
+                    <ul class="float_right">
+                        <li><a href="kiwiths2.html">HOME</a></li>
+                        <li><a href="#targrt1">ABOUT</a></li>
+                        <li><a href="#target2">BRAND</a></li>
+                        <li><a href="#target3">GUIDE</a></li>
+                        <li><a href="shop.html">STORE</a></li>
+                        <li><a href="contect.html">CONTECT</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+            </header>
+            
+        </div>
+        <div id="block"></div>
+        <video width="1880" autoplay loop controls>
+        <source src="./ODD_PALLET/zz.mp4" type="audio/mp4"/></video>
+
+
+        <footer id="footer">
+                <!-- 왼쪽 상자 -->
+            <div id="footer_left">
+                <div>R.um.com ｜ Incheon, South Korea ｜ Tel: +82 (0)00.000.0000 ｜ Email: R.um@gmail.com </div>
+                </br/>
+                <div> deisgn by ⓒ 2019 Choi Ah Reum right reserved. </div>
+            </div>
+                <!-- 오른쪽 상자 -->
+                <ul class="float_left" id="footer_right">
+                    <li><img src="layout1/f_book.png"></li>
+                    <li><img src="layout1/twitter.png"></li>
+                    <li><img src="layout1/pinterest.png"></li>
+                    <li><img src="layout1/instagram.png"></li>
+                    <div class="clear"></div>
+                </ul>
+            <div class="clear"></div>
+        </footer>
     </body>
 
 </html>
